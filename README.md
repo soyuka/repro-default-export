@@ -13,7 +13,7 @@ run `bash init.sh`
 
 In `src/index.ts`:
 
-```
+```javascript
 import createElement from 'inferno-create-element'
 import Component from 'inferno-component'
 
@@ -27,7 +27,7 @@ Though, if you run `node dist/bundle.js`, you'll get `undefined`
 
 If you check out the compiled file, you will see something like:
 
-```
+```javascript
 const inferno_create_element_1 = __webpack_require__(3);
 const inferno_component_1 = __webpack_require__(2);
 console.log(inferno_create_element_1.default);
@@ -36,7 +36,7 @@ console.log(inferno_component_1.default);
 
 But, rollup (which is used by Inferno) doesn't export any default:
 
-```
+```javascript
 true ? module.exports = factory(__webpack_require__(0)) :
 typeof define === 'function' && define.amd ? define(['inferno'], factory) :
 (global.Inferno = global.Inferno || {}, global.Inferno.createElement = factory(global.Inferno));
@@ -44,7 +44,7 @@ typeof define === 'function' && define.amd ? define(['inferno'], factory) :
 
 An alternative is to use the following import statements:
 
-```
+```javascript
 import * as createElement from 'inferno-create-element'
 import * as Component from 'inferno-component'
 
@@ -54,7 +54,7 @@ console.log(Component)
 
 But by using this, typescript expects Objects and the module signatures are wrong, and therefore blocking the compilation.
 
-For example, you won't be able to extend `Component`, because it's not recognized as a class.
+**For example, you won't be able to extend `Component`, because it's not recognized as a class.**
 
 ## Version used:
 
