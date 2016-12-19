@@ -42,6 +42,20 @@ typeof define === 'function' && define.amd ? define(['inferno'], factory) :
 (global.Inferno = global.Inferno || {}, global.Inferno.createElement = factory(global.Inferno));
 ```
 
+An alternative is to use the following import statements:
+
+```
+import * as createElement from 'inferno-create-element'
+import * as Component from 'inferno-component'
+
+console.log(createElement)
+console.log(Component)
+```
+
+But by using this, typescript expects Objects and the module signatures are wrong, and therefore blocking the compilation.
+
+For example, you won't be able to extend `Component`, because it's not recognized as a class.
+
 ## Version used:
 
 - typescript@2.1.4
