@@ -4,6 +4,7 @@ Related issues:
 
 https://github.com/trueadm/inferno/issues/596
 https://github.com/rollup/rollup/issues/1156
+https://github.com/Microsoft/TypeScript/issues/13017
 
 ## Install
 
