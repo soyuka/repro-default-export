@@ -1,0 +1,19 @@
+{
+  "name": "repro-default-export",
+  "version": "1.0.0",
+  "description": "foo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^2.1.4"
+  },
+  "devDependencies": {
+    "ts-loader": "^1.3.3",
+    "webpack": "^2.1.0-beta.25"
+  }
+}
